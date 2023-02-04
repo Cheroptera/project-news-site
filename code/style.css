@@ -15,6 +15,7 @@ body {
   justify-items: center; 
   align-items: start;
   grid-gap: 3em 3em; 
+  overflow: hidden; 
 }
 
 @media screen and (min-width: 1024px) {
@@ -28,7 +29,6 @@ body {
 @media screen and (min-width: 667px) and (max-width:1024px) {
   .grid-parent {
       width: 100%;
-      grid-template-columns:repeat (auto-fill, minmax (30%, 2fr)); 
     }
   }
 
@@ -44,12 +44,22 @@ body {
       font-size:30px; 
     }
   }
-  
 
+  @media screen and (max-width:480px) {
+    .header-name {
+      font-size:25px; 
+    }
+  }
+  
+@media screen and (max-width: 480px) {
+  .logo {
+    width:20%; 
+  }
+}
 
 .logo {
-  width: 125px; 
-  height: 125px; 
+  width: 15%; 
+  height: 15%; 
   border-radius: 70%;
   margin: 22px; 
 }
@@ -59,6 +69,7 @@ body {
   flex-direction: column;
   background-color: rgb(229, 215, 217); 
   width: 100%; 
+  overflow-x: hidden;
 }
   .header::after {
     content: ""; 
